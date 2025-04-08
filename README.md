@@ -90,10 +90,5 @@ Get-Alias limpiarTemp
 ```sh
 winget install --exact --id Microsoft.AzureCLI
 az login
-
-
-
-Install-Module -Name Az -AllowClobber -Force -SkipPublisherCheck
-Import-Module Az
-
 ```
+
