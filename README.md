@@ -258,7 +258,7 @@ Get-AzVMImageSku -Location 'East US' -PublisherName Canonical -Offer "0001-com-u
 # Configuracion
 $vmConfig = New-AzVMConfig -VMName $vmName -VMSize $size | `
     Set-AzVMOperatingSystem -Linux -ComputerName $vmName -Credential (Get-Credential -UserName $username -Message "Enter VM credentials") | `
-    Set-AzVMSourceImage -PublisherName "Canonical" -Offer "0001-com-ubuntu-server-jammy" -Skus "22_04-lts" -Version "latest" |  `
+    Set-AzVMSourceImage -PublisherName "Canonical" -Offer "0001-com-ubuntu-server-jammy" -Skus "22_04-lts-gen2" -Version "latest" |  `
     Add-AzVMNetworkInterface -Id $nic.Id
 
 # validar vmconfig
